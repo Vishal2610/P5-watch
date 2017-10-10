@@ -1,11 +1,15 @@
 function setup() {
-    createCanvas(650, 650);
+    createCanvas(displayWidth, displayHeight);
     angleMode(DEGREES);
 }
 
 function draw(){
+    let centerX = displayWidth/2;
+    let centerY = displayHeight/2;
+
+    //console.log(centerX + ":" + centerY);
     background(0, 0, 0);
-    translate(300, 300);
+    translate(centerX, centerY);
     rotate(-90);
 
     let hrs = hour();
