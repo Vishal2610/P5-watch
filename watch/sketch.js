@@ -11,18 +11,23 @@ function draw(){
     let hrs = hour();
     let mins = minute();
     let sec = second();
-	
-	
-	
-	let min = mins + "." + sec;
-	let hr = hrs + "." + mins;
+
+    if(sec < 10)  sec = '0' + sec;
+    if(mins < 10)  mins = '0' + mins;
+
+	  let min = mins + "." + sec;
+	  let hr = hrs + "." + mins  + sec;
+
+    //console.log(s + " : " + min);
+    //console.log(min);
+    //console.log(min + ":" + hr );
 
     strokeWeight(8);
     stroke(255,75,255);
     noFill();
     let secHand = map(sec, 0, 60, 0, 360);
     arc(0, 0, 300, 300, 0, secHand);
-    
+
     push();
     rotate(secHand);
     stroke(255,75,255);
