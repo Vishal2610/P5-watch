@@ -15,9 +15,10 @@ function draw(){
     if(sec < 10)  sec = '0' + sec;
     if(mins < 10)  mins = '0' + mins;
 
-	  let min = mins + "." + sec;
-	  let hr = hrs + "." + mins  + sec;
-
+    let s = sec * 0.0166;
+	  let min = mins +  s;
+	  let hr = hrs + "." + mins ;
+    //console.log(s +":"+min+":"+hr);
     //console.log(s + " : " + min);
     //console.log(min);
     //console.log(min + ":" + hr );
